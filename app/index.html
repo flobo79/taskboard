@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>OTTO PHP Entwicklungsserver</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <style type="text/css" media="screen">
+
+        body {
+            font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        a {
+            color: blue;
+            outline: none;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        p {
+            margin: 0 0 18px
+        }
+
+        img {
+            border: none;
+        }
+
+        input {
+            vertical-align: middle;
+        }
+
+        #wrapper {
+            width: 100%;
+            min-width: 500px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+            /* Header
+            -----------------------------------------------------------------------------*/
+        #header {
+            height: 150px;
+            background: #bad11e;
+        }
+
+        h1 {
+            padding: 50px 20px;
+            margin: 0;
+            font-size: 3em;
+        }
+            /* Middle
+            -----------------------------------------------------------------------------*/
+        #content {
+        }
+        
+ 
+ 
+#content ul>li {
+display:block;
+float:left;
+height:180px;
+width:180px;
+border:1px solid #ccc;
+margin:5px;
+}
+
+#content ul>li li {
+    display:list-item;
+  width:auto;
+  height: auto
+}
+
+#content ul>li ul {
+
+}
+        
+        
+        
+.flipsquare {
+  display: block;
+  margin: 10px auto;
+  z-index: 1;
+  -webkit-perspective: 1000;
+  height:100%;
+  width: 100%;
+}
+
+.flipsquare_box {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 0.5s;
+}
+
+.flipsquare:hover .flipsquare_box {
+  -webkit-transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  background-color: #FFF;
+}
+
+.front {
+
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+}
+        
+    </style>
+
+    
+    <script type="text/javascript">
+        function popup(url) {
+            fenster = window.open(url, "Popupfenster", "width=1000,height=600,resizable=yes");
+            fenster.focus();
+            return false;
+        }
+        
+  
+  
+  
+  
+  
+  
+  
+        
+      var items = [
+       {
+          label:'Taskboard',
+          id:false,
+          link:'http://otto-php-dev.silpion.de/taskboard',
+          links:false
+       },
+       {
+          label:'NPI',
+          link:false,
+          id:false,
+          links:[
+            ['NPI von Softbricks', 'http://www.ultradigital.de/new_portal_interface/', false],
+            ['NPI 2.0 Staging', 'http://otto-php-dev.silpion.de/npi2/', false],
+            ['NPI 2.0 Test', 'http://otto-php-dev.silpion.de/npi2test/', false] 
+          ]
+        },
+        {
+          label:'Otto-Magazin',
+          id:false,
+          links:[
+            ['Test-Instanz', 'http://otto-php-dev.silpion.de/cmtest/', false]
+          ]
+        }, 
+        {
+          label:'Retusche Annotation',
+          id:93,
+          links:[
+            ['Auftrag 1', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvalue/', false],
+            ['Auftrag 1 Popup', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvalue/', true],
+            ['Auftrag 1 Tokenfehler', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvaluexx/', false],
+            ['Auftrag 1 Auftragfehler', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042xyz&token=mmptesttokenvalue/', false],
+            ['Auftrag 1 Fehler - Popup', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042xyz&token=mmptesttokenvalue/', true]
+          ]
+        }, 
+        
+        {  
+          label:'Retusche Pflege',
+          id:93,
+          links:[
+            ['Auftrag 1', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvalue/', false],
+            ['Auftrag 1 Popup', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvalue/', true],
+            ['Auftrag 1 Tokenfehler', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042&token=mmptesttokenvaluexx/', false],
+            ['Auftrag 1 Auftragfehler', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042xyz&token=mmptesttokenvalue/', false],
+            ['Auftrag 1 Fehler - Popup', 'http://otto-php-dev.silpion.de/retuschetest/?jobId=R100042xyz&token=mmptesttokenvalue/', true]
+          ]
+        },
+        
+        {
+          label:'Jenkins',
+          id:false,
+          link:'http://otto-php-dev.office.silpion.de:8080/',
+          links:false
+       },
+       
+       {
+          label:'Composer Packages',
+          id:false,
+          link:'http://otto-php-dev.silpion.de/packages',
+          links:false
+       },
+       
+       {
+          label:'GIT Repo',
+          id:false,
+          link:'http://otto-php-dev.silpion.de/taskboard',
+          links:false
+       },
+      ];
+        
+           
+        
+    </script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div id="header">
+        <h1>Otto PHP Dev</h1>
+    </div>
+    <!-- #header-->
+
+    <div id="content">
+        <ul id="squares">
+            
+        </ul>
+    </div>
+    
+
+
+</div>
+<!-- #wrapper -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+
+
+  function drawSquare(item, index) {
+    var box = $('<li>');
+    var flipbox = $('<span class="flipsquare_box">');
+    flipbox.append('<div class="front">'
+    +   (item.link ? '<a href="'+item.link+'">'+item.label+'</a>' : item.label)
+    +   '</div>');
+    
+    if(item.links) {
+      box.addClass('flipsquare');
+      
+      var back = $('<ul class="back">');
+      
+      $(item.links).each(function(e, i) {
+
+        back.append('<li>'
+        +    '<a href="'+(i[2] ? '#' : i[1])+'" '+(i[2] ? 'onclick="popup(\''+i[1]+'\')"':'')+'>'+i[0]+'</a>'
+        + '</li>');
+      });
+      
+      flipbox.append(back);
+    }
+    
+    
+    box.append(flipbox);
+    $('#squares').append(box);
+  }
+
+
+(function() {
+  
+  
+  for(e in items) {
+    drawSquare(items[e], e)
+  }
+  
+  
+  
+  
+  $.cookie("key", "09641f1a6873137f1c5d261799b71ff0cbaaec0e");
+  var key = $.cookie('key');
+  
+  R = function (query, data, callback) {
+  
+    console.log(api+query+'&key='+key+'');
+    $.getJSON(
+      //async: false,
+      //contentType: "application/json",
+      api+query+'&key='+key+''
+    , function(data) {
+      
+      console.log(data);
+      
+    });
+  };
+})();
+
+  api = "http://localhost/Otto/board/restproxy.php";
+  
+</script>
+
+</body>
+</html>

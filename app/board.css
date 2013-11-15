@@ -1,0 +1,17 @@
+#content ul>li {
+display:block;
+float:left;
+height:180px;
+width:180px;
+border:1px solid #ccc;
+margin:5px;
+}
+#content ul>li>ul {
+display:none;
+}
+
+#content ul>li>ul {
+  display: inline;
+  width:auto;
+  height: auto
+}

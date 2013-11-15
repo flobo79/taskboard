@@ -1,0 +1,8 @@
+{
+     "name": "otto_board",
+     "description": "ottos project board",
+     "version": "0.0.1",
+     "dependencies": {
+        "karma": "*"
+     }
+}
